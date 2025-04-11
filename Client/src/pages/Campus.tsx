@@ -12,7 +12,7 @@ const Campus = () => {
   }, []);
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <Navbar />
       
       {/* Page Header */}
