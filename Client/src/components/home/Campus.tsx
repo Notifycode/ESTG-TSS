@@ -6,28 +6,28 @@ import { ArrowRight, MapPin } from 'lucide-react';
 const campusImages = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
     alt: 'Library Building',
-    caption: 'Modern Library'
+    caption: 'Modern Library',
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
+    url: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80',
     alt: 'Science Labs',
-    caption: 'Advanced Research Labs'
+    caption: 'Advanced Research Labs',
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    url: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
     alt: 'Student Center',
-    caption: 'Student Center'
+    caption: 'Student Center',
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80',
+    url: 'https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80',
     alt: 'Sports Complex',
-    caption: 'Sports Complex'
-  }
+    caption: 'Sports Complex',
+  },
 ];
 
 const facilities = [
@@ -38,29 +38,32 @@ const facilities = [
   "Student center with dining options",
   "Sports complex and recreational areas",
   "Technology innovation hub",
-  "Career development center"
+  "Career development center",
 ];
 
 const Campus = () => {
   const [activeImage, setActiveImage] = useState(0);
-  
+
   return (
     <section className="py-16 md:py-24 bg-white dark:bg-black overflow-hidden">
       <div className="container px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
           {/* Content Side */}
           <div>
             <AnimatedSection animation="slide-up">
               <h5 className="text-estg-blue font-medium mb-3">CAMPUS LIFE</h5>
-              <h2 className="section-heading mb-6">Experience Our World-Class Facilities</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Experience Our World-Class Facilities
+              </h2>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="fade-in" delay={200}>
               <p className="text-lg text-muted-foreground mb-8">
                 Our college provides a vibrant and supportive environment where students can learn, innovate, and grow. With state-of-the-art facilities and a beautiful setting, ESTG offers the perfect backdrop for your academic journey.
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="fade-in" delay={400}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 mb-8">
                 {facilities.map((facility, index) => (
@@ -71,16 +74,17 @@ const Campus = () => {
                 ))}
               </div>
             </AnimatedSection>
-            
           </div>
-          
+
           {/* Image Side */}
           <AnimatedSection animation="scale-in">
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
               {campusImages.map((image, index) => (
                 <div 
                   key={image.id}
-                  className={`transition-opacity duration-500 absolute inset-0 ${activeImage === index ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                  className={`transition-opacity duration-500 absolute inset-0 ${
+                    activeImage === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
                 >
                   <img 
                     src={image.url} 
@@ -92,7 +96,7 @@ const Campus = () => {
                   </div>
                 </div>
               ))}
-              
+
               <div className="absolute bottom-6 right-6 z-20 flex space-x-2">
                 {campusImages.map((_, index) => (
                   <button 
@@ -106,6 +110,7 @@ const Campus = () => {
               </div>
             </div>
           </AnimatedSection>
+
         </div>
       </div>
     </section>

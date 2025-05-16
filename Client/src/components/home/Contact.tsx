@@ -7,7 +7,7 @@ const contactInfo = [
   {
     icon: <MapPin size={20} className="text-estg-blue" />,
     title: 'Our Location',
-    details: '1234 Campus Drive, University City, 10001'
+    details: 'Kigali-Rwanda'
   },
   {
     icon: <Phone size={20} className="text-estg-blue" />,
@@ -31,7 +31,7 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "2970fb62-6888-4a71-a921-0aa3234a856a");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
