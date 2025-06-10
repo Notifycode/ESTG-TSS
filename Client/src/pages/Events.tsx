@@ -40,7 +40,7 @@ const News = () => {
 
       <section className="py-16 text-center">
       <AnimatedSection>
-  <h2 className="text-4xl font-bold mb-4 text-black dark:text-white">Upcoming Events</h2>
+  <h1 className="text-4xl font-bold mb-4 text-black dark:text-white">Upcoming Events</h1>
   <p className="text-black dark:text-white max-w-xl mx-auto mb-12">
     Join us for exciting school activities, workshops, and celebrations! Stay updated on upcoming events and mark your calendars—we can't wait to see you there.
   </p>
@@ -64,7 +64,7 @@ const News = () => {
                 <div
                   key={news._id}
                   className="rounded-sm border overflow-hidden shadow-md hover:shadow-xl transition duration-300"
-                  onClick={() => navigate(`/news/${news._id}`)}
+                  onClick={() => navigate(`/events/${news._id}`)}
                 >
                   <div className="relative h-[300px]">
                     <img

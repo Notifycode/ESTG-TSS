@@ -10,11 +10,10 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Programs', path: '/programs' },
   { name: 'Events', path: '/events' },
-  { name: 'Updates', path: '/announcement' },
-  { name: 'Administrative', path: '/admission' },
+  { name: 'Updates', path: '/updates' },
+  { name: 'Administrative', path: '/administrative' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
-
 ];
 
 const Navbar = () => {

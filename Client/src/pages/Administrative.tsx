@@ -2,14 +2,11 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AnimatedSection from '../components/ui/AnimatedSection';
-import Refe from "../assets/eating.jpg";
 import Elysee from "../assets/elysee.jpg";
 import Etianee from "../assets/etianne.jpg";
 import Marthe from "../assets/marthe.jpg";
-import Tv from "../assets/gettyimages-1786348765-612x612.jpg";
-import Running from "../assets/elysee.jpg";
 
-const Campus = () => {
+const Administrative = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -22,9 +19,9 @@ const Campus = () => {
       <div className="pt-20 bg-estg-gray-light dark:bg-black">
         <div className="container mx-auto px-4 text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-black dark:text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-black dark:text-white">
               Administrative
-            </h2>
+            </h1>
             <p className="text-black max-w-xl mx-auto mb-8 md:mb-12 dark:text-white px-4">
               Experience our vibrant college community and world-class facilities designed to support your academic journey.
             </p>
@@ -32,7 +29,7 @@ const Campus = () => {
         </div>
       </div>
 
-      {/* Campus Content */}
+      {/* Administrative Content */}
       <div className="py-4 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-in">
@@ -42,7 +39,7 @@ const Campus = () => {
                 <img src={Elysee} alt="activity" className="w-[70%] ml-24 md:w-[300px] h-[350px] md:h-[300px] object-cover rounded-md"/>
                 <div className="flex-1 p-2">
                   <div className="flex justify-between items-start">
-                    <h1 className="text-xl md:text-2xl font-semibold p-2 md:p-4">Mukunzi ELYSEE</h1>
+                    <h2 className="text-xl md:text-2xl font-semibold p-2 md:p-4">Mukunzi ELYSEE</h2>
                   </div>
                   <p className="text-start pl-3 md:mr-20">At the helm of ESTG is our esteemed principal, Mukunzi ELYSEE, a visionary leader with a deep passion for education and student development.</p> 
                   <div className="pl-3 md:mr-20">
@@ -67,7 +64,7 @@ const Campus = () => {
                 <img src={Etianee} alt="activity" className="w-[70%] md:mr-28 md:w-[300px] h-[350px] md:h-[300px] object-cover rounded-md"/>
                 <div className="flex-1 p-2 ml-24">
                   <div className="flex justify-between items-start">
-                    <h1 className="text-xl md:text-2xl font-semibold md:pb-4">Nzaramyimana Etianee</h1>
+                    <h2 className="text-xl md:text-2xl font-semibold md:pb-4">Nzaramyimana Etianee</h2>
                   </div>
                   <p className="text-start">At the helm of ESTG is our esteemed principal, Nzaramyimana Etianee, a visionary leader with a deep passion for education and student development.</p> 
                   <div className="p-1">
@@ -121,4 +118,4 @@ const Campus = () => {
   );
 };
 
-export default Campus;
+export default Administrative;

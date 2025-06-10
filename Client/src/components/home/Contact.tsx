@@ -9,17 +9,17 @@ const contactInfo = [
   {
     icon: <MapPin size={20} className="text-estg-blue" />,
     title: 'Our Location',
-    details: 'Kigali-Rwanda'
+    details: 'Gisenyi, Rubavu District'
   },
   {
     icon: <Phone size={20} className="text-estg-blue" />,
     title: 'Phone Number',
-    details: '+1 (234) 567-890'
+    details: '+250 788 852 859'
   },
   {
     icon: <Mail size={20} className="text-estg-blue" />,
     title: 'Email Address',
-    details: 'info@estg.edu'
+    details: 'ndahiriwefidele@hotmail.com'
   },
   {
     icon: <Clock size={20} className="text-estg-blue" />,

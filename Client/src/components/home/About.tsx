@@ -29,7 +29,7 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden shadow-soft">
               <img 
                 src={Estgbanner}
-                alt="ESTG Campus"
+                alt="ESTG Image Banner"
                 className={`w-full h-full object-cover aspect-[4/3] ${loaded ? 'loaded' : 'lazy-load'}`}
               />
             </div>

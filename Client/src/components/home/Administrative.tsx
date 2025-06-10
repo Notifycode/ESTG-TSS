@@ -3,7 +3,7 @@ import AnimatedSection from '../ui/AnimatedSection';
 import { Button } from '../ui/button';
 import { ArrowRight, MapPin } from 'lucide-react';
 
-const campusImages = [
+const AdministrativeImages = [
   {
     id: 1,
     url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
@@ -41,7 +41,7 @@ const facilities = [
   "Career development center",
 ];
 
-const Campus = () => {
+const Administrative = () => {
   const [activeImage, setActiveImage] = useState(0);
 
   return (
@@ -52,7 +52,7 @@ const Campus = () => {
           {/* Content Side */}
           <div>
             <AnimatedSection animation="slide-up">
-              <h5 className="text-estg-blue font-medium mb-3">CAMPUS LIFE</h5>
+              <h5 className="text-estg-blue font-medium mb-3">Administrative LIFE</h5>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Experience Our World-Class Facilities
               </h2>
@@ -79,7 +79,7 @@ const Campus = () => {
           {/* Image Side */}
           <AnimatedSection animation="scale-in">
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
-              {campusImages.map((image, index) => (
+              {AdministrativeImages.map((image, index) => (
                 <div 
                   key={image.id}
                   className={`transition-opacity duration-500 absolute inset-0 ${
@@ -98,7 +98,7 @@ const Campus = () => {
               ))}
 
               <div className="absolute bottom-6 right-6 z-20 flex space-x-2">
-                {campusImages.map((_, index) => (
+                {AdministrativeImages.map((_, index) => (
                   <button 
                     key={index}
                     onClick={() => setActiveImage(index)}
@@ -117,4 +117,4 @@ const Campus = () => {
   );
 };
 
-export default Campus;
+export default Administrative;

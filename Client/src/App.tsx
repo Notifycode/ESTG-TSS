@@ -7,18 +7,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Index from "./pages/Index";
 import Programs from "./pages/Programs";
-import Campus from "./pages/Campus";
+import Administrative from "./pages/Administrative";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Announcement from "./pages/Announcement";
+import Updates from "./pages/Updates";
 import NotFound from "./pages/NotFound";
 
 import AdminForm from "./pages/Auth/AdminForm";
 import User from "./pages/Auth/User";
 import ContentCreatorRegistration from "./pages/Auth/ContentCreatorRegistration";
 import ForgetPassword from "./pages/Auth/forgetPassword";
-import News from "./pages/News";
-import NewsDetail from "./pages/NewsDetail";
+import Events from "./pages/Events";
+import EventsDetail from "./pages/EventsDetail";
 import Adminpanel from "./pages/Adminpanel";
 
 import Update from './pages/Adminpanel/Adminpages/updates/update';
@@ -50,14 +50,14 @@ const App = () => (
             <Route path="/createevent" element={<CreateEvent />} />
             <Route path="/createupdate" element={<CreateUpdate />} />
 
-            <Route path="/news" element={<News />} />
-            <Route path="/announcement" element={<Announcement />} />
-            <Route path="/admission" element={<Campus />} />
+            <Route path="/Events" element={<Events />} />
+            <Route path="/Updates" element={<Updates />} />
+            <Route path="/administrative" element={<Administrative />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<AdminForm />} />
-            <Route path="/events" element={<News />} />
-            <Route path="/admission" element={<Campus />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/administrative" element={<Administrative />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<AdminForm />} />
@@ -69,7 +69,7 @@ const App = () => (
             <Route path="/contentcreatorregistration" element={<ContentCreatorRegistration />} />
             <Route path="/forgetpassword" element={<ForgetPassword />} />
             <Route path="/update/:id" element={<UpdateForm />} />
-            <Route path="/news/:id" element={<NewsDetail />} />
+            <Route path="/Events/:id" element={<EventsDetail />} />
             <Route path="/editeevent/:id" element={<EditEventForm />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

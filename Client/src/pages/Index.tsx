@@ -5,7 +5,7 @@ import Footer from '../components/layout/Footer';
 import Hero from '../components/home/Hero';
 import About from '../components/home/About';
 // import Programs from '../components/home/Programs';
-import Campus from '../components/home/Campus';
+import Administrative from '../components/home/Administrative';
 import Testimonials from '../components/home/Testimonials';
 import Contact from '../components/home/Contact';
 
@@ -20,8 +20,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
-      {/* <Programs /> */}
-      <Campus />
+      <Administrative />
       <Testimonials />
       <Contact />
       <Footer />
