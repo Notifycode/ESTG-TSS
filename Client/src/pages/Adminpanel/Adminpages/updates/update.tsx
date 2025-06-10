@@ -44,16 +44,56 @@ function Update() {
   };
 
   const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://localhost:5000/api/delete_update/${id}`, {
-        withCredentials: true,
-      });
-      toast.success('Update deleted successfully!', { position: "bottom-right" });
-      fetchData();
-    } catch (error) {
-      console.error('Error deleting update:', error);
-      toast.error('Failed to delete the update. Please try again.', { position: "bottom-right" });
-    }
+    toast.info(
+         <div className="p-2">
+           <p className="font-semibold mb-2">do you want to delete this?</p>
+           <p className="text-sm mb-3">This action cannot be undone.</p>
+           <div className="flex justify-end gap-2">
+             <button
+               onClick={() => {
+                 toast.dismiss();
+                 toast.success('Deletion cancelled', { position: 'bottom-right' });
+               }}
+               className="px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded-md"
+             >
+               Cancel
+             </button>
+             <button
+               onClick={async () => {
+                 toast.dismiss();
+                 try {
+                   const response = await axios.delete(
+                     `http://localhost:5000/api/delete_update/${id}`,
+                     {
+                       withCredentials: true,
+                     }
+                   );
+                   if (response.status === 200) {
+                     toast.success(response.data.message || "Update  deleted successfully", { position: 'bottom-right' });
+                     setData((prevData) => prevData.filter((item) => item._id !== id));
+                   } else {
+                     throw new Error('Failed to delete');
+                   }
+                 } catch (error) {
+                   console.error('Error deleting update:', error);
+                   toast.error("Failed to delete update.", { position: 'bottom-right' });
+                 }
+               }}
+               className="px-3 py-1 text-sm bg-red-500 hover:bg-red-600 text-white rounded-md"
+             >
+               Delete
+             </button>
+           </div>
+         </div>,
+         {
+           position: 'bottom-right',
+           autoClose: false,
+           closeOnClick: false,
+           closeButton: false,
+           draggable: false,
+           className: 'custom-toast',
+         }
+       );
   };
 
   const handleUpdate = (id) => {
