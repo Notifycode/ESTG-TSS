@@ -101,7 +101,7 @@ const Footer = () => {
     {/* Text */}
     <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-estg-blue to-purple-600">
       <a
-        href="https://notify-code.netlify.app"
+        href="https://dmha-digital-co.netlify.app"
         target="_blank"
         rel="noopener noreferrer"
         className="underline decoration-dotted hover:text-estg-blue transition-colors inline-flex items-center space-x-1"
